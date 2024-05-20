@@ -10,7 +10,7 @@
 import Foundation
 import JavaScriptCore
 
-#if os(OSX)
+#if os(macOS)
 import AppKit
 #else
 import UIKit

@@ -12,11 +12,11 @@ import Foundation
 /**
  Basic imports and typealiases.
  */
-#if os(OSX)
+#if os(macOS)
     import AppKit
     public typealias HRColor = NSColor
     public typealias HRFont  = NSFont
-#elseif os(iOS)
+#else
     import UIKit
     public typealias HRColor = UIColor
     public typealias HRFont  = UIFont
@@ -36,8 +36,8 @@ import Foundation
     public typealias AttributedStringKey = NSAttributedStringKey
 #endif
 
-#if swift(>=4.2) && os(iOS)
-    public typealias TextStorageEditActions = NSTextStorage.EditActions
-#else
+#if swift(>=4.2) && os(macOS)
     public typealias TextStorageEditActions = NSTextStorageEditActions
+#else
+    public typealias TextStorageEditActions = NSTextStorage.EditActions
 #endif
